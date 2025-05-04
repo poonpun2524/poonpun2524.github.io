@@ -114,7 +114,7 @@ span.score, span.right, span.left {
 }
 
 /* Hacker-style blinking text animation for headers */
-h2, h3 {
+h1, h2, h3 {
     animation: hackerGlow 2s infinite !important;
 }
 
@@ -131,27 +131,6 @@ h2, h3 {
     background-color: #000000 !important;
 }
 
-h1 {
-    color: rgba(247, 163, 38, 0.89) !important; /* สีเหลืองทอง */
-    font-family: "Lucida Handwriting", cursive !important;
-    font-size: 3em !important;
-    position: absolute !important;
-    width: 100% !important;
-    height: auto !important;
-    transform: translateX(100%) !important;
-    animation: scrolling 15s linear infinite !important;
-    white-space: nowrap !important;
-}
-
-/* เลื่อนข้อความจากขวาไปซ้าย */
-@keyframes scrolling {
-    0% {
-        transform: translateX(100%) !important;
-    }
-    100% {
-        transform: translateX(-100%) !important;
-    }
-}
 
 .about-container h3 {
     animation: blinkingText 1.5s infinite !important;
