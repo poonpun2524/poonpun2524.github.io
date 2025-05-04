@@ -56,46 +56,4 @@ span.score, span.right, span.left {
     color: #00FF00 !important;
 }
 .library-lost-result-unranked {
-    color: #006600 !important;
-}
-.library-won-result-unranked {
-    color: #33FF33 !important;
-}
-
-/* ANIMATION */
-.about-container h1 {
-    color: rgba(247, 163, 38, 0.89) !important;
-    font-family: "Lucida Handwriting", cursive !important; 
-    font-size: 3em !important;
-    position: absolute !important;
-    width: 100% !important;
-    height: 100% !important;
-    -moz-transform: translateX(100%) !important;
-    -webkit-transform: translateX(100%) !important;    
-    transform: translateX(100%) !important;
-    -moz-animation: scrolling 15s linear infinite !important;
-    -webkit-animation: scrolling 15s linear infinite !important;
-    animation: scrolling 15s linear infinite !important;
-}
-
-/* Move it (define the animation) */
-@-moz-keyframes scrolling {
-    0%   { -moz-transform: translateX(100%) !important; }
-    100% { -moz-transform: translateX(-100%) !important; }
-}
-@-webkit-keyframes scrolling {
-    0%   { -webkit-transform: translateX(100%) !important; }
-    100% { -webkit-transform: translateX(-100%) !important; }
-}
-@keyframes scrolling {
-    0%   { 
-        -moz-transform: translateX(100%) !important;
-        -webkit-transform: translateX(100%) !important;
-        transform: translateX(100%) !important;        
-    }
-    100% { 
-        -moz-transform: translateX(-100%) !important;
-        -webkit-transform: translateX(-100%) !important;
-        transform: translateX(-100%) !important; 
-    }
-}
+    color:
