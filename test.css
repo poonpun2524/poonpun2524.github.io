@@ -6,3 +6,18 @@ body {
                 url(https://cur.cursors-4u.net/symbols/sym-1/sym53.png),
                 auto !important;
 }
+
+body.light .ChatIndicator.unread .count {
+  color: #00ff00 !important;
+  font-family: "Courier New", monospace !important;
+}
+
+body.light #main-content, body.light #main-content>div, body.light body, body.light html {
+  color: #00ff00 !important;
+  font-family: "Courier New", monospace !important;
+}
+
+body.light header.NavBar .MenuLink, body.light header.NavBar .clickable, body.light header.NavBar a {
+  color: #00ff00 !important;
+  font-family: "Courier New", monospace !important;
+}
