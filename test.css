@@ -130,22 +130,22 @@ h2, h3 {
 }
 
 /* =============== HACKER SCROLLING H1 =============== */
-h1 {
-      position: absolute;
-      top: 20%;
-      left: 100%;
-      font-family: "Courier New", monospace;
-      font-size: 3em;
-      white-space: nowrap;
-      color: #00FF00;
-      text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00;
-      animation: scrollHacker 15s linear infinite;
-    }
-
-    @keyframes scrollHacker {
-      0% { left: 100%; }
-      100% { left: -100%; }
-    }
+.about-container h1 {
+    color: #00FF00 !important;
+   font-family: "Courier New", monospace !important;
+    font-size: 3em !important; 
+    position: absolute !important; 
+    width: 100% !important; 
+    height: 100% !important; 
+    /* Starting position */
+    -moz-transform:translateX(100%) !important; 
+    -webkit-transform:translateX(100%) !important; 
+    transform:translateX(100%) !important; 
+    /* Apply animation to this element */	
+    -moz-animation: scrolling 15s linear infinite !important; 
+    -webkit-animation: scrolling 15s linear infinite !important; 
+    animation: scrolling 15s linear infinite !important; 
+}
 
 /* Win/Lose style */
 .library-won-result-vs-stronger {
