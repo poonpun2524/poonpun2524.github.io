@@ -5,6 +5,8 @@
 }
 
 .container {
+    max-width: none !important;
+    background-image: none !important;
     background-color: #1A1A1A !important;
 }
 
