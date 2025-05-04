@@ -1,0 +1,123 @@
+/* Universal rule to make all text green */
+* {
+    color: #00FF00 !important;
+    text-shadow: 0 0 1px #00FF00 !important;
+}
+
+/* เปลี่ยน background rain และ text glow ให้เป็นสีเขียว */
+body::before {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1)),
+                repeating-linear-gradient(
+                    0deg,
+                    rgba(0, 255, 0, 0.2),
+                    rgba(0, 255, 0, 0.2) 1px,
+                    transparent 1px,
+                    transparent 20px
+                ) !important;
+}
+
+body::after {
+    color: #00FF00 !important;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(0, 255, 0, 0.1) 10px,
+        rgba(0, 255, 0, 0.1) 20px
+    ) !important;
+}
+
+/* ปรับเฉพาะองค์ประกอบที่ใช้สีฟ้า ให้เป็นสีเขียว */
+.avatar-container .Player-username, 
+.avatar-container .Player .Player-rank,
+.move-number, .game-name, .Clock, .size, 
+.Player-username, .Player-rank, .game_name, 
+.board_size, .date, td.handicap, .user_info, 
+.sortable, span.player-name, span.player-rank, 
+span.Clock.black.mini-goban, span.Clock.white.mini-goban, 
+span.score, span.right, span.left {
+    color: #00FF00 !important;
+    text-shadow: 0 0 1px #00FF00 !important;
+}
+
+.image, .images {
+    border: 2px solid #00FF00 !important;
+}
+
+/* Blinking text animation (green glow) */
+@keyframes hackerGlow {
+    0% { text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00 !important; }
+    50% { text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00 !important; }
+    100% { text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00 !important; }
+}
+
+/* เปลี่ยนสีปุ่มและพื้นหลังที่ใช้ฟ้า */
+.ratings-container {
+    border: 1px solid #00AA00 !important;
+}
+
+.library-won-result-vs-stronger {
+    background-color: #00AA00 !important;
+    color: #000000 !important;
+}
+.library-won-result-vs-weaker {
+    background-color: #33FF33 !important;
+    color: #000000 !important;
+}
+.library-lost-result-vs-weaker {
+    background-color: #006600 !important;
+    color: #00FF00 !important;
+}
+.library-lost-result-vs-stronger {
+    background-color: #007700 !important;
+    color: #00FF00 !important;
+}
+.library-lost-result-unranked {
+    color: #006600 !important;
+}
+.library-won-result-unranked {
+    color: #33FF33 !important;
+}
+
+/*ANIMATION*/
+
+.about-container h1 {
+    color:rgba(247, 163, 38, 0.89);
+	/*color:RGBA( 0, 206, 209, 1 );*/
+   font-family: "Lucida Handwriting", cursive; 
+    font-size: 3em;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Starting position */
+    -moz-transform:translateX(100%);
+    -webkit-transform:translateX(100%);	
+    transform:translateX(100%);
+    /* Apply animation to this element */	
+    -moz-animation: scrolling 15s linear infinite;
+    -webkit-animation: scrolling 15s linear infinite;
+    animation: scrolling 15s linear infinite;
+}
+
+
+/* Move it (define the animation) */
+@-moz-keyframes scrolling {
+    0%   { -moz-transform: translateX(100%); }
+    100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scrolling {
+    0%   { -webkit-transform: translateX(100%); }
+    100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scrolling {
+     0%   { 
+        -moz-transform: translateX(100%); /* Firefox bug fix */
+        -webkit-transform: translateX(100%); /* Firefox bug fix */
+        transform: translateX(100%); 		
+    }
+    100% { 
+        -moz-transform: translateX(-100%); /* Firefox bug fix */
+        -webkit-transform: translateX(-100%); /* Firefox bug fix */
+        transform: translateX(-100%); 
+    }
+}
