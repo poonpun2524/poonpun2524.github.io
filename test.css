@@ -4,7 +4,7 @@
     text-shadow: 0 0 1px #00FF00 !important;
 }
 
-/* Modify the elements of the page */
+/* Body styling */
 body {
     text-align: center !important;
     font-family: "Courier New", monospace !important;
@@ -41,7 +41,7 @@ body::before {
     100% { background-position: 0 100% !important; }
 }
 
-/* Floating matrix-like text */
+/* Floating glitch text */
 body::after {
     content: '101010 ハック 010101 #!/bin/bash 110011' !important;
     position: fixed !important;
@@ -70,12 +70,10 @@ body::after {
     100% { transform: translate(0, 0) !important; opacity: 0.3 !important; }
 }
 
-/* Container background */
+/* Containers and image styling */
 .container {
     background-color: #0A0A0A !important;
 }
-
-/* Image style */
 .image, .images {
     width: 20% !important;
     border-radius: 20px !important;
@@ -87,7 +85,7 @@ body::after {
     border-radius: 40px !important;
 }
 
-/* Text highlight for go elements */
+/* Info highlight for Go game stats */
 .avatar-container .Player-username,
 .avatar-container .Player .Player-rank,
 .move-number, .game-name, .Clock, .size,
@@ -100,109 +98,64 @@ span.score, span.right, span.left {
     text-shadow: 0 0 1px #00FF00 !important;
 }
 
-/* Info cards */
+/* Cards and tables */
 .ratings-container, .active-games {
     background-color: #0A0A0A !important;
     padding: 10px !important;
     opacity: 0.95 !important;
     border: 1px solid #00CC00 !important;
 }
-
-/* Game tables */
 .PaginatedTable.game-history-table.clickable-rows,
 .PaginatedTable.review-history-table.clickable-rows {
     background-color: #111 !important;
 }
 
-/* Hacker-style blinking headers */
-.about-container h1 {
-    color: rgba(0, 255, 0, 0.85); /* สีเขียว Hacker */
-    font-family: "Courier New", monospace;
-    font-size: 3em;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00;
-
-    /* Starting position */
-    -moz-transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-
-    /* Apply animation to this element */
-    -moz-animation: scrolling 15s linear infinite;
-    -webkit-animation: scrolling 15s linear infinite;
-    animation: scrolling 15s linear infinite;
-}
-
-/* Move it (define the animation) */
-@-moz-keyframes scrolling {
-    0%   { -moz-transform: translateX(100%); }
-    100% { -moz-transform: translateX(-100%); }
-}
-@-webkit-keyframes scrolling {
-    0%   { -webkit-transform: translateX(100%); }
-    100% { -webkit-transform: translateX(-100%); }
-}
-@keyframes scrolling {
-    0% {
-        -moz-transform: translateX(100%);
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
-    }
-    100% {
-        -moz-transform: translateX(-100%);
-        -webkit-transform: translateX(-100%);
-        transform: translateX(-100%);
-    }
-}
-
-
+/* Glowing subheaders */
 h2, h3 {
     animation: hackerGlow 2s infinite !important;
 }
-
 @keyframes hackerGlow {
     0% { text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00 !important; }
     50% { text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00 !important; }
     100% { text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00 !important; }
 }
 
-/* Scrolling hacker header */
+/* Hacker-style blinking h3 */
+.about-container h3 {
+    animation: blinkingText 1.5s infinite !important;
+}
+@keyframes blinkingText {
+    0%, 49%, 100% { opacity: 1 !important; }
+    60%, 99% { opacity: 0.3 !important; }
+}
+
+/* =============== HACKER SCROLLING H1 =============== */
 .about-container {
     overflow: hidden !important;
     position: relative !important;
     background-color: #000000 !important;
+    height: 100px; /* ปรับความสูงตามต้องการ */
 }
 
 .about-container h1 {
+    color: rgba(0, 255, 0, 0.85) !important;
+    font-family: "Courier New", monospace !important;
     font-size: 3em !important;
+    white-space: nowrap !important;
     position: absolute !important;
-    width: 100% !important;
-    height: 100% !important;
-    transform: translateX(100%) !important;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%) !important;
+    text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00 !important;
     animation: scrolling 15s linear infinite !important;
-    text-shadow: 0 0 10px #00FF00 !important;
 }
 
 @keyframes scrolling {
-    0% { transform: translateX(100%) !important; }
-    100% { transform: translateX(-100%) !important; }
+    0% { left: 100%; }
+    100% { left: -100%; }
 }
 
-.about-container h3 {
-    animation: blinkingText 1.5s infinite !important;
-}
-
-@keyframes blinkingText {
-    0% { opacity: 1 !important; }
-    49% { opacity: 1 !important; }
-    60% { opacity: 0.3 !important; }
-    99% { opacity: 0.3 !important; }
-    100% { opacity: 1 !important; }
-}
-
-/* Hacker-style game result colors */
+/* Win/Lose style */
 .library-won-result-vs-stronger {
     background-color: #00AA00 !important;
     color: #000000 !important;
@@ -226,7 +179,7 @@ h2, h3 {
     color: #33FF33 !important;
 }
 
-/* Hide menu you don't want */
+/* Hide leaderboard link */
 a[href="/leaderboards"] {
     display: none !important;
 }
