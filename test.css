@@ -6,30 +6,3 @@ body {
                 url(https://cur.cursors-4u.net/symbols/sym-1/sym53.png),
                 auto !important;
 }
-
-body.light #main-content, body.light #main-content>div, body.light body, body.light html {
-  color: #00ff00 !important;
-  font-family: "Courier New", monospace !important;
-}
-
-body.light .clickable, body.light .fakelink, body.light a {
-  color: #00ff00 !important;
-  font-family: "Courier New", monospace !important;
-}
-
-body.light .ChatIndicator.unread .count {
-  color: #00ff00 !important;
-  font-family: "Courier New", monospace !important;
-}
-
-.Player .Player-username {
-  color: #00ff00 !important;
-  font-family: "Lucida Handwriting", cursive !important;
-  font-size: 25px !important;
-}
-
-.Player .Player-rank {
-  color: #00ff00 !important;
-  font-family: "Lucida Handwriting", cursive !important;
-  font-size: 25px !important;
-}
