@@ -4,12 +4,10 @@
     text-shadow: 0 0 1px #00FF00 !important;
 }
 
-body {
-    background: #000000;
-    cursor: url(https://cur.cursors-4u.net/symbols/sym-1/sym53.ani),
-            url(https://cur.cursors-4u.net/symbols/sym-1/sym53.png),
-            auto;
-    position: relative;
+.container {
+    max-width: none !important;
+    background-image: none !important;
+    background-color: #1A1A1A !important;
 }
 
 /* ปรับเฉพาะองค์ประกอบที่ใช้สีฟ้า ให้เป็นสีเขียว */
@@ -64,20 +62,17 @@ span.score, span.right, span.left {
     color: #33FF33 !important;
 }
 
-/*ANIMATION*/
-
+/* ANIMATION */
 .about-container h1 {
-    color:rgba(247, 163, 38, 0.89) !important;
+    color: rgba(247, 163, 38, 0.89) !important;
     font-family: "Lucida Handwriting", cursive !important; 
     font-size: 3em !important;
     position: absolute !important;
     width: 100% !important;
     height: 100% !important;
-    /* Starting position */
-    -moz-transform:translateX(100%) !important;
-    -webkit-transform:translateX(100%) !important;    
-    transform:translateX(100%) !important;
-    /* Apply animation to this element */    
+    -moz-transform: translateX(100%) !important;
+    -webkit-transform: translateX(100%) !important;    
+    transform: translateX(100%) !important;
     -moz-animation: scrolling 15s linear infinite !important;
     -webkit-animation: scrolling 15s linear infinite !important;
     animation: scrolling 15s linear infinite !important;
@@ -93,7 +88,7 @@ span.score, span.right, span.left {
     100% { -webkit-transform: translateX(-100%) !important; }
 }
 @keyframes scrolling {
-     0%   { 
+    0%   { 
         -moz-transform: translateX(100%) !important;
         -webkit-transform: translateX(100%) !important;
         transform: translateX(100%) !important;        
