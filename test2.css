@@ -21,6 +21,10 @@ body::after {
     background: #000000 !important;
 }
 
+.container {
+    background: #000000 !important;
+}
+
 /* ปรับเฉพาะองค์ประกอบที่ใช้สีฟ้า ให้เป็นสีเขียว */
 .avatar-container .Player-username, 
 .avatar-container .Player .Player-rank,
