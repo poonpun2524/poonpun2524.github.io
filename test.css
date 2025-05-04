@@ -1,1 +1,14 @@
+body {
+  text-align: center !important;
+  font-family: "Courier New", monospace !important;
+  background: #000000 !important;
+  cursor: url(https://cur.cursors-4u.net/symbols/sym-1/sym53.ani),
+                url(https://cur.cursors-4u.net/symbols/sym-1/sym53.png),
+                auto !important;
+}
 
+.Player .Player-username {
+  color: #00ff00 !important;
+  font-family: "Lucida Handwriting", cursive !important;
+  font-size: 25px !important;
+}
