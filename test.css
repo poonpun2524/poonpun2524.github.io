@@ -21,3 +21,37 @@ body.light header.NavBar .MenuLink, body.light header.NavBar .clickable, body.li
   color: #00ff00 !important;
   font-family: "Courier New", monospace !important;
 }
+
+body.light .clickable, body.light .fakelink, body.light a {
+  color: #00ff00 !important;
+  font-family: "Courier New", monospace !important;
+}
+
+body.light .User .ratings-grid .rating-entry.unset {
+  color: #00ff00 !important;
+  font-family: "Courier New", monospace !important;
+}
+
+body.light .btn, body.light a.btn, body.light button {
+  color: #00ff00 !important;
+  font-family: "Courier New", monospace !important;
+}
+
+body.light .btn, body.light a.btn, body.light button {
+  background-color: #000000;
+}
+
+body.light .btn.primary, body.light .primary, body.light a.btn.primary, body.light button.primary {
+  border-color: #333333;
+}
+
+body.light .btn.primary, body.light .primary, body.light a.btn.primary, body.light button.primary {
+  background-color: #333333;
+}
+
+.Player .Player-username {
+  color: #00ff00 !important;
+  font-family: "Courier New", monospace !important;
+}
+
+
