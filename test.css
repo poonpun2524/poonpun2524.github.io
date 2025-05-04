@@ -1,7 +1,7 @@
-/* Universal rule to make all text sky blue */
+/* Universal rule to make all text green */
 * {
-    color: #00B7EB !important;
-    text-shadow: 0 0 1px #00B7EB !important;
+    color: #00FF00 !important;
+    text-shadow: 0 0 1px #00FF00 !important;
 }
 
 /* Modify the elements of the page */
@@ -25,8 +25,8 @@ body::before {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1)),
                 repeating-linear-gradient(
                     0deg,
-                    rgba(0, 183, 235, 0.2),
-                    rgba(0, 183, 235, 0.2) 1px,
+                    rgba(0, 255, 0, 0.2),
+                    rgba(0, 255, 0, 0.2) 1px,
                     transparent 1px,
                     transparent 20px
                 ) !important;
@@ -47,7 +47,7 @@ body::after {
     left: 0 !important;
     width: 100% !important;
     height: 100% !important;
-    color: #00B7EB !important;
+    color: #00FF00 !important;
     font-family: "Courier New", monospace !important;
     font-size: 12px !important;
     opacity: 0.3 !important;
@@ -55,8 +55,8 @@ body::after {
         45deg,
         transparent,
         transparent 10px,
-        rgba(0, 183, 235, 0.1) 10px,
-        rgba(0, 183, 235, 0.1) 20px
+        rgba(0, 255, 0, 0.1) 10px,
+        rgba(0, 255, 0, 0.1) 20px
     ) !important;
     animation: glitchText 3s linear infinite !important;
     z-index: -1 !important;
@@ -80,14 +80,14 @@ body::after {
     border-radius: 20px !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    border: 2px solid #00B7EB !important;
+    border: 2px solid #00FF00 !important;
 }
 
 .images {
     border-radius: 40px !important;
 }
 
-/* Specific text elements (reinforce sky blue color and glow) */
+/* Specific text elements (reinforce green color and glow) */
 .avatar-container .Player-username, 
 .avatar-container .Player .Player-rank,
 .move-number, .game-name, .Clock, .size, 
@@ -96,15 +96,15 @@ body::after {
 .sortable, span.player-name, span.player-rank, 
 span.Clock.black.mini-goban, span.Clock.white.mini-goban, 
 span.score, span.right, span.left {
-    color: #00B7EB !important;
-    text-shadow: 0 0 1px #00B7EB !important;
+    color: #00FF00 !important;
+    text-shadow: 0 0 1px #00FF00 !important;
 }
 
 .ratings-container, .active-games {
     background-color: #1A1A1A !important;
     padding: 10px !important;
     opacity: 0.9 !important;
-    border: 1px solid #0099CC !important;
+    border: 1px solid #00CC00 !important;
 }
 
 .PaginatedTable.game-history-table.clickable-rows, 
@@ -119,9 +119,9 @@ h2, h3 {
 }
 
 @keyframes hackerGlow {
-    0% { text-shadow: 0 0 5px #00B7EB, 0 0 10px #00B7EB !important; }
-    50% { text-shadow: 0 0 10px #00B7EB, 0 0 20px #00B7EB !important; }
-    100% { text-shadow: 0 0 5px #00B7EB, 0 0 10px #00B7EB !important; }
+    0% { text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00 !important; }
+    50% { text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00 !important; }
+    100% { text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00 !important; }
 }
 
 /* Scrolling header with hacker aesthetic */
@@ -132,19 +132,42 @@ h2, h3 {
 }
 
 .about-container h1 {
-    font-size: 3em !important;
-    position: absolute !important;
-    width: 100% !important;
-    height: 100% !important;
-    transform: translateX(100%) !important;
-    animation: scrolling 15s linear infinite !important;
-    text-shadow: 0 0 10px #00B7EB !important;
+    font-family: "Courier New", monospace !important;
+    color: #00FF00 !important;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Starting position */
+    -moz-transform:translateX(100%);
+    -webkit-transform:translateX(100%);	
+    transform:translateX(100%);
+    /* Apply animation to this element */	
+    -moz-animation: scrolling 15s linear infinite;
+    -webkit-animation: scrolling 15s linear infinite;
+    animation: scrolling 15s linear infinite;
 }
 
-/* Scrolling animation */
+
+/* Move it (define the animation) */
+@-moz-keyframes scrolling {
+    0%   { -moz-transform: translateX(100%); }
+    100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scrolling {
+    0%   { -webkit-transform: translateX(100%); }
+    100% { -webkit-transform: translateX(-100%); }
+}
 @keyframes scrolling {
-    0% { transform: translateX(100%) !important; }
-    100% { transform: translateX(-100%) !important; }
+     0%   { 
+        -moz-transform: translateX(100%); /* Firefox bug fix */
+        -webkit-transform: translateX(100%); /* Firefox bug fix */
+        transform: translateX(100%); 		
+    }
+    100% { 
+        -moz-transform: translateX(-100%); /* Firefox bug fix */
+        -webkit-transform: translateX(-100%); /* Firefox bug fix */
+        transform: translateX(-100%); 
+    }
 }
 
 .about-container h3 {
@@ -159,28 +182,28 @@ h2, h3 {
     100% { opacity: 1 !important; }
 }
 
-/* Library results with sky blue shades */
+/* Library results with green shades */
 .library-won-result-vs-stronger {
-    background-color: #0099CC !important;
+    background-color: #00CC00 !important;
     color: #000000 !important;
 }
 .library-won-result-vs-weaker {
-    background-color: #33CCFF !important;
+    background-color: #33FF33 !important;
     color: #000000 !important;
 }
 .library-lost-result-vs-weaker {
-    background-color: #006699 !important;
-    color: #00B7EB !important;
+    background-color: #006600 !important;
+    color: #00FF00 !important;
 }
 .library-lost-result-vs-stronger {
-    background-color: #0077AA !important;
-    color: #00B7EB !important;
+    background-color: #009900 !important;
+    color: #00FF00 !important;
 }
 .library-lost-result-unranked {
-    color: #006699 !important;
+    color: #006600 !important;
 }
 .library-won-result-unranked {
-    color: #33CCFF !important;
+    color: #33FF33 !important;
 }
 
 /* Light mode overrides */
@@ -189,11 +212,11 @@ body.light .btn, body.light a.btn, body.light button {
     background-color: #000000 !important;
 }
 body.light .btn.primary, body.light .primary, body.light a.btn.primary, body.light button.primary {
-    background-color: #006699 !important;
+    background-color: #006600 !important;
 }
 body.light .btn:active, body.light a.btn:active, body.light button:active {
-    background-color: #006699 !important;
-    text-shadow: 0 0 5px #00B7EB, 0 0 10px #00B7EB !important;
+    background-color: #006600 !important;
+    text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00 !important;
 }
 
 body.light select {
@@ -204,4 +227,3 @@ body.light select {
 a[href="/leaderboards"] {
     display: none !important;
 }
-ทำเป็นแนวhackerสีเขียวอะ
