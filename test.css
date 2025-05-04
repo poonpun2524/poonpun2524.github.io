@@ -130,30 +130,22 @@ h2, h3 {
 }
 
 /* =============== HACKER SCROLLING H1 =============== */
-.about-container {
-    overflow: hidden !important;
-    position: relative !important;
-    background-color: #000000 !important;
-    height: 100px; /* ปรับความสูงตามต้องการ */
-}
+h1 {
+      position: absolute;
+      top: 20%;
+      left: 100%;
+      font-family: "Courier New", monospace;
+      font-size: 3em;
+      white-space: nowrap;
+      color: #00FF00;
+      text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00;
+      animation: scrollHacker 15s linear infinite;
+    }
 
-.about-container h1 {
-    color: rgba(0, 255, 0, 0.85) !important;
-    font-family: "Courier New", monospace !important;
-    font-size: 3em !important;
-    white-space: nowrap !important;
-    position: absolute !important;
-    top: 50%;
-    left: 100%;
-    transform: translateY(-50%) !important;
-    text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00 !important;
-    animation: scrolling 15s linear infinite !important;
-}
-
-@keyframes scrolling {
-    0% { left: 100%; }
-    100% { left: -100%; }
-}
+    @keyframes scrollHacker {
+      0% { left: 100%; }
+      100% { left: -100%; }
+    }
 
 /* Win/Lose style */
 .library-won-result-vs-stronger {
