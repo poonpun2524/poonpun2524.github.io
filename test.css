@@ -10,11 +10,12 @@ body {
     font-family: "Courier New", monospace !important;
     background: #000000 !important;
     cursor: url(https://cur.cursors-4u.net/symbols/sym-1/sym53.ani),
-                url(https://cur.cursors-4u.net/symbols/sym-1/sym53.png),
-                auto !important;
+            url(https://cur.cursors-4u.net/symbols/sym-1/sym53.png),
+            auto !important;
     position: relative !important;
 }
 
+/* Background effect: matrix rain */
 body::before {
     content: '' !important;
     position: fixed !important;
@@ -40,8 +41,9 @@ body::before {
     100% { background-position: 0 100% !important; }
 }
 
+/* Floating matrix-like text */
 body::after {
-    content: '101010 ハック 010101 #! /bin/bash 110011' !important;
+    content: '101010 ハック 010101 #!/bin/bash 110011' !important;
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
@@ -68,52 +70,51 @@ body::after {
     100% { transform: translate(0, 0) !important; opacity: 0.3 !important; }
 }
 
+/* Container background */
 .container {
-    max-width: none !important;
-    background-image: none !important;
-    background-color: #1A1A1A !important;
+    background-color: #0A0A0A !important;
 }
 
-/* IMAGES */
+/* Image style */
 .image, .images {
     width: 20% !important;
     border-radius: 20px !important;
+    border: 2px solid #00FF00 !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    border: 2px solid #00FF00 !important;
 }
-
 .images {
     border-radius: 40px !important;
 }
 
-/* Specific text elements (reinforce green color and glow) */
-.avatar-container .Player-username, 
+/* Text highlight for go elements */
+.avatar-container .Player-username,
 .avatar-container .Player .Player-rank,
-.move-number, .game-name, .Clock, .size, 
-.Player-username, .Player-rank, .game_name, 
-.board_size, .date, td.handicap, .user_info, 
-.sortable, span.player-name, span.player-rank, 
-span.Clock.black.mini-goban, span.Clock.white.mini-goban, 
+.move-number, .game-name, .Clock, .size,
+.Player-username, .Player-rank, .game_name,
+.board_size, .date, td.handicap, .user_info,
+.sortable, span.player-name, span.player-rank,
+span.Clock.black.mini-goban, span.Clock.white.mini-goban,
 span.score, span.right, span.left {
     color: #00FF00 !important;
     text-shadow: 0 0 1px #00FF00 !important;
 }
 
+/* Info cards */
 .ratings-container, .active-games {
-    background-color: #1A1A1A !important;
+    background-color: #0A0A0A !important;
     padding: 10px !important;
-    opacity: 0.9 !important;
+    opacity: 0.95 !important;
     border: 1px solid #00CC00 !important;
 }
 
-.PaginatedTable.game-history-table.clickable-rows, 
+/* Game tables */
+.PaginatedTable.game-history-table.clickable-rows,
 .PaginatedTable.review-history-table.clickable-rows {
-    background-color: #1A1A1A !important;
-    -webkit-tap-highlight-color: transparent !important;
+    background-color: #111 !important;
 }
 
-/* Hacker-style blinking text animation for headers */
+/* Hacker-style blinking headers */
 h2, h3 {
     animation: hackerGlow 2s infinite !important;
 }
@@ -124,7 +125,7 @@ h2, h3 {
     100% { text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00 !important; }
 }
 
-/* Scrolling header with hacker aesthetic */
+/* Scrolling hacker header */
 .about-container {
     overflow: hidden !important;
     position: relative !important;
@@ -141,7 +142,6 @@ h2, h3 {
     text-shadow: 0 0 10px #00FF00 !important;
 }
 
-/* Scrolling animation */
 @keyframes scrolling {
     0% { transform: translateX(100%) !important; }
     100% { transform: translateX(-100%) !important; }
@@ -159,9 +159,9 @@ h2, h3 {
     100% { opacity: 1 !important; }
 }
 
-/* Library results with green shades */
+/* Hacker-style game result colors */
 .library-won-result-vs-stronger {
-    background-color: #00CC00 !important;
+    background-color: #00AA00 !important;
     color: #000000 !important;
 }
 .library-won-result-vs-weaker {
@@ -173,7 +173,7 @@ h2, h3 {
     color: #00FF00 !important;
 }
 .library-lost-result-vs-stronger {
-    background-color: #009900 !important;
+    background-color: #007700 !important;
     color: #00FF00 !important;
 }
 .library-lost-result-unranked {
@@ -183,24 +183,7 @@ h2, h3 {
     color: #33FF33 !important;
 }
 
-/* Light mode overrides */
-body.light .Card, body.light .Modal,
-body.light .btn, body.light a.btn, body.light button {
-    background-color: #000000 !important;
-}
-body.light .btn.primary, body.light .primary, body.light a.btn.primary, body.light button.primary {
-    background-color: #006600 !important;
-}
-body.light .btn:active, body.light a.btn:active, body.light button:active {
-    background-color: #006600 !important;
-    text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00 !important;
-}
-
-body.light select {
-    background-color: #1A1A1A !important;
-}
-
-/* Clean up the menu */
+/* Hide menu you don't want */
 a[href="/leaderboards"] {
     display: none !important;
 }
