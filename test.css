@@ -115,6 +115,49 @@ span.score, span.right, span.left {
 }
 
 /* Hacker-style blinking headers */
+.about-container h1 {
+    color: rgba(0, 255, 0, 0.85); /* สีเขียว Hacker */
+    font-family: "Courier New", monospace;
+    font-size: 3em;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00;
+
+    /* Starting position */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+
+    /* Apply animation to this element */
+    -moz-animation: scrolling 15s linear infinite;
+    -webkit-animation: scrolling 15s linear infinite;
+    animation: scrolling 15s linear infinite;
+}
+
+/* Move it (define the animation) */
+@-moz-keyframes scrolling {
+    0%   { -moz-transform: translateX(100%); }
+    100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scrolling {
+    0%   { -webkit-transform: translateX(100%); }
+    100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scrolling {
+    0% {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
+
 h2, h3 {
     animation: hackerGlow 2s infinite !important;
 }
