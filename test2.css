@@ -4,25 +4,14 @@
     text-shadow: 0 0 1px #00FF00 !important;
 }
 
-/* เปลี่ยน background rain และ text glow ให้เป็นสีเขียว */
-body::before {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1)),
-                repeating-linear-gradient(
-                    0deg,
-                    rgba(0, 255, 0, 0.2),
-                    rgba(0, 255, 0, 0.2) 1px,
-                    transparent 1px,
-                    transparent 20px
-                ) !important;
-}
-
-body::after {
-    color: #00FF00 !important;
-    background: #000000 !important;
-}
-
 body {
+    text-align: center !important;
+    font-family: "Courier New", monospace !important;
     background: #000000 !important;
+    cursor: url(https://cur.cursors-4u.net/symbols/sym-1/sym53.ani),
+                url(https://cur.cursors-4u.net/symbols/sym-1/sym53.png),
+                auto !important;
+    position: relative !important;
 }
 
 /* ปรับเฉพาะองค์ประกอบที่ใช้สีฟ้า ให้เป็นสีเขียว */
