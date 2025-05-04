@@ -131,20 +131,26 @@ h2, h3 {
     background-color: #000000 !important;
 }
 
-.about-container h1 {
+h1 {
+    color: rgba(247, 163, 38, 0.89) !important; /* สีเหลืองทอง */
+    font-family: "Lucida Handwriting", cursive !important;
     font-size: 3em !important;
     position: absolute !important;
     width: 100% !important;
-    height: 100% !important;
+    height: auto !important;
     transform: translateX(100%) !important;
     animation: scrolling 15s linear infinite !important;
-    text-shadow: 0 0 10px #00FF00 !important;
+    white-space: nowrap !important;
 }
 
-/* Scrolling animation */
+/* เลื่อนข้อความจากขวาไปซ้าย */
 @keyframes scrolling {
-    0% { transform: translateX(100%) !important; }
-    100% { transform: translateX(-100%) !important; }
+    0% {
+        transform: translateX(100%) !important;
+    }
+    100% {
+        transform: translateX(-100%) !important;
+    }
 }
 
 .about-container h3 {
