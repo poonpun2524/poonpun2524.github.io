@@ -1,114 +1,203 @@
+/* Universal rule to make all text sky blue */
+* {
+    color: #00FF00 !important;
+    text-shadow: 0 0 1px #00FF00 !important;
+}
+
+/* Modify the elements of the page */
 body {
-    text-align: center;
-    background-color: #0d0d0d;
-    color: #00ff00;
-    font-family: "Courier New", monospace;
+    text-align: center !important;
+    font-family: "Courier New", monospace !important;
+    background: #000000 !important;
+    cursor: url(https://cur.cursors-4u.net/symbols/sym-1/sym53.ani),
+                url(https://cur.cursors-4u.net/symbols/sym-1/sym53.png),
+                auto !important;
+    position: relative !important;
 }
 
-/* Modify page elements */
-.avatar-container .Player-username {
-    font-size: 2em;
-    font-family: "Courier New", monospace;
-    color: #00ff00;
-    text-shadow: 0 0 5px #00ff00;
+body::before {
+    content: '' !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1)),
+                repeating-linear-gradient(
+                    0deg,
+                    rgba(0, 183, 235, 0.2),
+                    rgba(0, 183, 235, 0.2) 1px,
+                    transparent 1px,
+                    transparent 20px
+                ) !important;
+    background-size: 100% 200% !important;
+    z-index: -1 !important;
+    animation: matrixRain 5s linear infinite !important;
 }
 
-.ratings-container {
-    background-color: #1a1a1a;
-    border: solid 1px #00ff00;
-    box-shadow: 0 0 10px #00ff00;
+@keyframes matrixRain {
+    0% { background-position: 0 0 !important; }
+    100% { background-position: 0 100% !important; }
+}
+
+body::after {
+    content: '101010 ハック 010101 #! /bin/bash 110011' !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    color: #00FF00 !important;
+    font-family: "Courier New", monospace !important;
+    font-size: 12px !important;
+    opacity: 0.3 !important;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(0, 183, 235, 0.1) 10px,
+        rgba(0, 183, 235, 0.1) 20px
+    ) !important;
+    animation: glitchText 3s linear infinite !important;
+    z-index: -1 !important;
+}
+
+@keyframes glitchText {
+    0% { transform: translate(0, 0) !important; opacity: 0.3 !important; }
+    50% { transform: translate(2px, -2px) !important; opacity: 0.5 !important; }
+    100% { transform: translate(0, 0) !important; opacity: 0.3 !important; }
 }
 
 .container {
     max-width: none !important;
-    background-image: url('https://i.imgur.com/5aehvPb.jpg');
-    background-color: #0d0d0d;
+    background-image: none !important;
+    background-color: #1A1A1A !important;
 }
 
-/* Library results */
+/* IMAGES */
+.image, .images {
+    width: 20% !important;
+    border-radius: 20px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border: 2px solid #00FF00 !important;
+}
+
+.images {
+    border-radius: 40px !important;
+}
+
+/* Specific text elements (reinforce green color and glow) */
+.avatar-container .Player-username, 
+.avatar-container .Player .Player-rank,
+.move-number, .game-name, .Clock, .size, 
+.Player-username, .Player-rank, .game_name, 
+.board_size, .date, td.handicap, .user_info, 
+.sortable, span.player-name, span.player-rank, 
+span.Clock.black.mini-goban, span.Clock.white.mini-goban, 
+span.score, span.right, span.left {
+    color: #00FF00 !important;
+    text-shadow: 0 0 1px #00FF66 !important;
+}
+
+.ratings-container, .active-games {
+    background-color: #1A1A1A !important;
+    padding: 10px !important;
+    opacity: 0.9 !important;
+    border: 1px solid #00CC00 !important;
+}
+
+.PaginatedTable.game-history-table.clickable-rows, 
+.PaginatedTable.review-history-table.clickable-rows {
+    background-color: #1A1A1A !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Hacker-style blinking text animation for headers */
+h2, h3 {
+    animation: hackerGlow 2s infinite !important;
+}
+
+@keyframes hackerGlow {
+    0% { text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00 !important; }
+    50% { text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00 !important; }
+    100% { text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00 !important; }
+}
+
+/* Scrolling header with hacker aesthetic */
+.about-container {
+    overflow: hidden !important;
+    position: relative !important;
+    background-color: #000000 !important;
+}
+
+.about-container h1 {
+    font-size: 3em !important;
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    transform: translateX(100%) !important;
+    animation: scrolling 15s linear infinite !important;
+    text-shadow: 0 0 10px #00FF00 !important;
+}
+
+/* Scrolling animation */
+@keyframes scrolling {
+    0% { transform: translateX(100%) !important; }
+    100% { transform: translateX(-100%) !important; }
+}
+
+.about-container h3 {
+    animation: blinkingText 1.5s infinite !important;
+}
+
+@keyframes blinkingText {
+    0% { opacity: 1 !important; }
+    49% { opacity: 1 !important; }
+    60% { opacity: 0.3 !important; }
+    99% { opacity: 0.3 !important; }
+    100% { opacity: 1 !important; }
+}
+
+/* Library results with green shades */
 .library-won-result-vs-stronger {
-    background-color: #006400 !important;
-    color: #00ff00 !important;
+    background-color: #00CC00 !important;
+    color: #000000 !important;
 }
 .library-won-result-vs-weaker {
-    background-color: #008000 !important;
-    color: #00ff00 !important;
+    background-color: #66FF66 !important;
+    color: #000000 !important;
 }
 .library-lost-result-vs-weaker {
-    background-color: #003300 !important;
-    color: #00ff00 !important;
+    background-color: #006600 !important;
+    color: #00FF00 !important;
 }
 .library-lost-result-vs-stronger {
-    background-color: #004d00 !important;
-    color: #00ff00 !important;
+    background-color: #007700 !important;
+    color: #00FF00 !important;
 }
-
-/* Game history table */
 .library-lost-result-unranked {
-    color: #ff4040 !important;
+    color: #006600 !important;
 }
 .library-won-result-unranked {
-    color: #00ff00 !important;
+    color: #66FF66 !important;
 }
 
-/* Pie chart */
-.strong-wins, .strong-losses, .weak-wins, .weak-losses {
-    fill: #00ff00 !important;
-    stroke: #00ff00;
-    filter: drop-shadow(0 0 5px #00ff00);
+/* Light mode overrides */
+body.light .Card, body.light .Modal,
+body.light .btn, body.light a.btn, body.light button {
+    background-color: #000000 !important;
+}
+body.light .btn.primary, body.light .primary, body.light a.btn.primary, body.light button.primary {
+    background-color: #006600 !important;
+}
+body.light .btn:active, body.light a.btn:active, body.light button:active {
+    background-color: #006600 !important;
+    text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00 !important;
 }
 
-/* Fonts and colors */
-h2, h3, h4 {
-    font-family: "Courier New", monospace;
-    color: #00ff00;
-    text-shadow: 0 0 5px #00ff00;
-}
-
-.camille {
-    color: #00ff00;
-    font-family: "Courier New", monospace;
-    position: static;
-    left: 0;
-}
-
-p {
-    color: #00cc00;
-    font-family: "Courier New", monospace;
-}
-
-/* Images and shaping */
-span.test {
-    display: inline-block;
-    padding: 0 10%;
-    color: #00cc00;
-}
-
-/* Animation */
-.about-container h1 {
-    color: #00ff00;
-    font-family: "Courier New", monospace;
-    font-size: 3em;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    text-shadow: 0 0 10px #00ff00;
-    transform: translateX(100%);
-    animation: scrolling 15s linear infinite;
-}
-
-/* Animation keyframes */
-@keyframes scrolling {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-}
-@-moz-keyframes scrolling {
-    0% { -moz-transform: translateX(100%); }
-    100% { -moz-transform: translateX(-100%); }
-}
-@-webkit-keyframes scrolling {
-    0% { -webkit-transform: translateX(100%); }
-    100% { -webkit-transform: translateX(-100%); }
+body.light select {
+    background-color: #1A1A1A !important;
 }
 
 /* Clean up the menu */
