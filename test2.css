@@ -1,59 +1,117 @@
-/* Universal rule to make all text green */
-* {
-    color: #00FF00 !important;
-    text-shadow: 0 0 1px #00FF00 !important;
+body {
+    text-align: center;
+    background-color: #0d0d0d;
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+}
+
+/* Modify page elements */
+.avatar-container .Player-username {
+    font-size: 2em;
+    font-family: "Courier New", monospace;
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
+}
+
+.ratings-container {
+    background-color: #1a1a1a;
+    border: solid 1px #00ff00;
+    box-shadow: 0 0 10px #00ff00;
 }
 
 .container {
     max-width: none !important;
-    background-image: none !important;
-    background-color: #1A1A1A !important;
+    background-image: url('https://i.imgur.com/5aehvPb.jpg');
+    background-color: #0d0d0d;
 }
 
-/* ปรับเฉพาะองค์ประกอบที่ใช้สีฟ้า ให้เป็นสีเขียว */
-.avatar-container .Player-username, 
-.avatar-container .Player .Player-rank,
-.move-number, .game-name, .Clock, .size, 
-.Player-username, .Player-rank, .game_name, 
-.board_size, .date, td.handicap, .user_info, 
-.sortable, span.player-name, span.player-rank, 
-span.Clock.black.mini-goban, span.Clock.white.mini-goban, 
-span.score, span.right, span.left {
-    color: #00FF00 !important;
-    text-shadow: 0 0 1px #00FF00 !important;
-}
-
-.image, .images {
-    border: 2px solid #00FF00 !important;
-}
-
-/* Blinking text animation (green glow) */
-@keyframes hackerGlow {
-    0% { text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00 !important; }
-    50% { text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00 !important; }
-    100% { text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00 !important; }
-}
-
-/* เปลี่ยนสีปุ่มและพื้นหลังที่ใช้ฟ้า */
-.ratings-container {
-    border: 1px solid #00AA00 !important;
-}
-
+/* Library results */
 .library-won-result-vs-stronger {
-    background-color: #00AA00 !important;
-    color: #000000 !important;
+    background-color: #006400 !important;
+    color: #00ff00 !important;
 }
 .library-won-result-vs-weaker {
-    background-color: #33FF33 !important;
-    color: #000000 !important;
+    background-color: #008000 !important;
+    color: #00ff00 !important;
 }
 .library-lost-result-vs-weaker {
-    background-color: #006600 !important;
-    color: #00FF00 !important;
+    background-color: #003300 !important;
+    color: #00ff00 !important;
 }
 .library-lost-result-vs-stronger {
-    background-color: #007700 !important;
-    color: #00FF00 !important;
+    background-color: #004d00 !important;
+    color: #00ff00 !important;
 }
+
+/* Game history table */
 .library-lost-result-unranked {
-    color:
+    color: #ff4040 !important;
+}
+.library-won-result-unranked {
+    color: #00ff00 !important;
+}
+
+/* Pie chart */
+.strong-wins, .strong-losses, .weak-wins, .weak-losses {
+    fill: #00ff00 !important;
+    stroke: #00ff00;
+    filter: drop-shadow(0 0 5px #00ff00);
+}
+
+/* Fonts and colors */
+h2, h3, h4 {
+    font-family: "Courier New", monospace;
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
+}
+
+.camille {
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+    position: static;
+    left: 0;
+}
+
+p {
+    color: #00cc00;
+    font-family: "Courier New", monospace;
+}
+
+/* Images and shaping */
+span.test {
+    display: inline-block;
+    padding: 0 10%;
+    color: #00cc00;
+}
+
+/* Animation */
+.about-container h1 {
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+    font-size: 3em;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-shadow: 0 0 10px #00ff00;
+    transform: translateX(100%);
+    animation: scrolling 15s linear infinite;
+}
+
+/* Animation keyframes */
+@keyframes scrolling {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+@-moz-keyframes scrolling {
+    0% { -moz-transform: translateX(100%); }
+    100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scrolling {
+    0% { -webkit-transform: translateX(100%); }
+    100% { -webkit-transform: translateX(-100%); }
+}
+
+/* Clean up the menu */
+a[href="/leaderboards"] {
+    display: none !important;
+}
