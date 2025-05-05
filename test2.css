@@ -190,25 +190,7 @@ body.light .User .game-history-table .winner_marker, body.light .User .review-hi
 }
 
 /*HIDE PARTS*/
-.RatingsChartByGame svg {
-    display: none !important;
-}
 
-.RatingsChart svg {
-    display: none !important;
-}
-
-.RatingsChart {
-    display: none !important;
-}
-
-.RatingsChartByGame {
-    display: none !important;
-}
-
-.User .ratings-row .graph-type-toggle {
-    display: none !important;
-}
 
 /* Clean up the menu */
 a[href="/leaderboards"] {
